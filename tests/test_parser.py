@@ -1,9 +1,5 @@
 """Tests for the Markdown parser."""
 
-import pytest
-
-
-@pytest.mark.skip(reason="Not yet implemented")
 def test_parse_frontmatter_extracts_title():
     """Frontmatter with a title field should be extracted."""
     from mdnotes.parser import parse_frontmatter
@@ -13,7 +9,6 @@ def test_parse_frontmatter_extracts_title():
     assert result["title"] == "My Note"
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_parse_frontmatter_extracts_tags():
     """Tags in [tag1, tag2] format should be parsed into a list."""
     from mdnotes.parser import parse_frontmatter
@@ -24,7 +19,6 @@ def test_parse_frontmatter_extracts_tags():
     assert "testing" in result["tags"]
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_parse_note_falls_back_to_heading(tmp_path):
     """A note without frontmatter should use the first # heading as the title."""
     from mdnotes.parser import parse_note
@@ -35,7 +29,6 @@ def test_parse_note_falls_back_to_heading(tmp_path):
     assert note.title == "Heading Title"
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_parse_note_finds_wiki_links(tmp_path):
     """Wiki-style [[links]] should be extracted from the body."""
     from mdnotes.parser import parse_note
@@ -47,7 +40,6 @@ def test_parse_note_finds_wiki_links(tmp_path):
     assert "Another" in note.links
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_parse_note_counts_words(tmp_path):
     """Word count should exclude frontmatter."""
     from mdnotes.parser import parse_note

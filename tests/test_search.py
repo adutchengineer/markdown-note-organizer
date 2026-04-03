@@ -1,9 +1,5 @@
 """Tests for keyword search."""
 
-import pytest
-
-
-@pytest.mark.skip(reason="Not yet implemented")
 def test_keyword_search_matches_title():
     """Search should match notes by title."""
     from mdnotes.parser import Note
@@ -18,7 +14,6 @@ def test_keyword_search_matches_title():
     assert results[0].filepath == "a.md"
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_keyword_search_case_insensitive():
     """Search should be case-insensitive."""
     from mdnotes.parser import Note
@@ -29,7 +24,6 @@ def test_keyword_search_case_insensitive():
     assert len(results) == 1
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_keyword_search_no_results():
     """Search with no matching notes should return an empty list."""
     from mdnotes.parser import Note

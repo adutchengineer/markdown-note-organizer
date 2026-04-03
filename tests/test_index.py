@@ -1,9 +1,5 @@
 """Tests for the note index."""
 
-import pytest
-
-
-@pytest.mark.skip(reason="Not yet implemented")
 def test_index_by_tag():
     """Notes should be retrievable by tag."""
     from mdnotes.index import NoteIndex
@@ -18,7 +14,6 @@ def test_index_by_tag():
     assert results[0].filepath == "a.md"
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_index_backlinks():
     """Backlinks should find notes that link to a given title."""
     from mdnotes.index import NoteIndex
@@ -33,7 +28,6 @@ def test_index_backlinks():
     assert results[0].filepath == "a.md"
 
 
-@pytest.mark.skip(reason="Not yet implemented")
 def test_index_unknown_tag_returns_empty():
     """Querying a tag that no note has should return an empty list."""
     from mdnotes.index import NoteIndex
